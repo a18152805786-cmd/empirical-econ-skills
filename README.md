@@ -1,4 +1,4 @@
-# 实证研究 skill 包（5 个）
+# 实证研究 skill 包（7 个）
 
 skill 是给 AI 助手（Codex / GPT）装的"专业工作说明书"。装好之后，你用大白话提要求，它会按这套专业标准去做，不用你背术语。
 
@@ -13,7 +13,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
 3. 完全退出 Codex，再重新打开。装在 `C:\Users\<你的用户名>\.codex\skills`。
 4. 同名旧 skill 会被改名备份（后缀 `.bak-时间`），不会被覆盖丢失。
 
-## 这 5 个 skill 各管什么
+## 这 7 个 skill 各管什么
 
 | skill | 一句话 | 你可以这样说 |
 |---|---|---|
@@ -22,6 +22,11 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
 | empirical-economics-peer-review | 像审稿人一样审一篇实证论文，给出分级意见 | "按审稿人的角度审一下这篇稿子，列出主要问题" |
 | python-econometrics-diagnostics | 用 Python 做残差、异方差、时间序列检查和独立验证 | "用 Python 独立验证一下表 3 的结果" |
 | paper-reading-matrix | 把一篇论文读成一张结构化的表 | "读这篇 PDF，做一张阅读矩阵" |
+| public-literature-discovery | 通过 OpenAlex、Crossref 等公开接口查论文元数据、DOI、引用关系 | "查一下这篇论文的 DOI 和被引情况" |
+| economics-public-database-lookup | 查 FRED、世界银行、SEC EDGAR 等公开经济金融数据 | "从世界银行取 2000–2020 年中国的人均 GDP" |
+
+## 想直接下载知网等数据库的论文？
+另装文献工具 Harness，步骤见 [HARNESS-INSTALL.md](HARNESS-INSTALL.md)。上面最后两个 skill 遇到需要学校账号的来源时，会交给它处理。
 
 ## 使用小提示
 - 把要处理的文件放进一个固定的工作文件夹，对它说"处理这个文件夹里的……"。
